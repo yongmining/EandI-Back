@@ -5,9 +5,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class MemberController {
 	
-	@GetMapping("main")
-	public String main() {
-		return "default/main";
+	@GetMapping("/home")
+	public String home() {
+		return "home";
+	}
+	
+	@GetMapping("/main")
+	public String menuMain() {
+		return "menu/menuMain";
 	}
 	
 }
