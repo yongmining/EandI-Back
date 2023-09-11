@@ -7,5 +7,6 @@ import org.springframework.stereotype.Service;
 public class MenuService {
 
 	@Autowired MenuMapper mapper;
-
+	
+	
 }
