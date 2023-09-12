@@ -21,8 +21,8 @@ public class MenuController {
 		return "home";
 	}
 	
-	@GetMapping("/main")
-	public Object menuMain() {
+	@GetMapping("/getTotalMenu")
+	public Object getTotalMenu() {
 		
 		ArrayList<MenuDTO> totalMenus = menuService.getTotalMenus();
 		return totalMenus;

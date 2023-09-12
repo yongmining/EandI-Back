@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sound.kiosk.cart.MenuMapper">
+	 <resultMap type="com.sound.kiosk.cart.CartDTO" id="cartDto"> 
+		<result column="C_NUM" property="CNum" />
+		<result column="C_COUNT" property="CCount" />
+		<result column="C_SEQ" property="CSeq" />
+		<result column="C_TF" property="CTF" />
+		<result column="C_PRICE" property="CPrice" />
+		<result column="C_MNUM" property="CMNum" />
+	</resultMap>
+
+
+	<insert id="insertCart" parameterType="com.sound.kiosk.cart.CartDTO">
+		INSERT INTO bookLoan (user_id, bookName, isbn, status, reserve_date) 
+		values(#{userId}, #{bookName}, #{isbn}, 'R', #{reserveDate})
+	</insert>
+	<!-- <select id="getTable" resultMap="bookDto">
+		<if test="whichTable == 'popularBook'">
+			SELECT bookImageURL FROM popularBook WHERE no <![CDATA[ <= ]]> 5
+			SELECT * FROM popularBook
+		</if>
+		<if test="whichTable == 'recentBook'">
+			SELECT * FROM recentBook
+		</if>
+	</select>
+
+	<insert id="insertLoan" parameterType="com.care.library.search.BookLoanDTO">
+		INSERT INTO bookLoan (user_id, bookName, isbn, status, reserve_date) 
+		values(#{userId}, #{bookName}, #{isbn}, 'R', #{reserveDate})
+	</insert>
+	
+	<delete id ="reserveCancel">
+		DELETE bookLoan WHERE loan_id = #{loanId}
+	</delete>
+	
+	<update id="updateLoanStatus">
+  		UPDATE bookLoan SET status = 'LE', end_date=#{newEndDate} WHERE user_id= #{id} AND isbn = #{isbn}
+  	</update>  -->
+		
+</mapper>
+
+
+
+
+
+
+
+  
