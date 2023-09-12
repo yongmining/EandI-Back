@@ -11,7 +11,7 @@ public class CartService {
 	@Autowired CartMapper cartMapper;
 	
 	public void setCustomerStatus() {
-		//cartMapper.setCustomerStatus()
+		//cartMapper.setCustomerStatus();
 	}
 	
 }
