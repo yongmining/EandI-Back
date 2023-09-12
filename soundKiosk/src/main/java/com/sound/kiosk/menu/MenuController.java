@@ -1,4 +1,6 @@
 package com.sound.kiosk.menu;
+import java.util.ArrayList;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,10 +23,9 @@ public class MenuController {
 	
 	@GetMapping("/main")
 	public Object menuMain() {
-		MenuDTO menu = new MenuDTO();
-		menu.MName = "coffee";
-		menu.MPrice = "4000";
-		return menu;
+		
+		ArrayList<MenuDTO> totalMenus = menuService.getTotalMenus();
+		return totalMenus;
 	}
 	
 }

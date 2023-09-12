@@ -4,16 +4,21 @@
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.sound.kiosk.menu.MenuMapper">
-	<!-- <resultMap type="com.sound.kiosk.menu.MenuDTO" id="menuDto"> id는 식별자일뿐
-		<result column="publication_year" property="publicationYear" />
-		<result column="rest_vol" property="restVol" />
+	 <resultMap type="com.sound.kiosk.menu.MenuDTO" id="menuDto"> 
+		<result column="M_NUM" property="MNum" />
+		<result column="M_NAME" property="MName" />
+		<result column="M_PRICE" property="MPrice" />
+		<result column="M_IMG" property="MImg" />
+		<result column="M_INFO" property="MInfo" />
+		<result column="M_CANUM" property="MCaNum" />
+		<result column="M_STATUS" property="MStatus" />
 	</resultMap>
-
-	<select id = "findMaxNum">
-  		SELECT MAX(total_id) FROM totalBook
+	
+	<select id = "getTotalMenus" resultMap="menuDto">
+  		SELECT * FROM menu
   	</select>
 
-	<select id="getTable" resultMap="bookDto">
+	<!-- <select id="getTable" resultMap="bookDto">
 		<if test="whichTable == 'popularBook'">
 			SELECT bookImageURL FROM popularBook WHERE no <![CDATA[ <= ]]> 5
 			SELECT * FROM popularBook
@@ -23,21 +28,18 @@
 		</if>
 	</select>
 
-	대출 신청(예약)
 	<insert id="insertLoan" parameterType="com.care.library.search.BookLoanDTO">
 		INSERT INTO bookLoan (user_id, bookName, isbn, status, reserve_date) 
 		values(#{userId}, #{bookName}, #{isbn}, 'R', #{reserveDate})
 	</insert>
 	
-	대출 예약 취소
 	<delete id ="reserveCancel">
 		DELETE bookLoan WHERE loan_id = #{loanId}
 	</delete>
 	
-	대출 연장하기
 	<update id="updateLoanStatus">
   		UPDATE bookLoan SET status = 'LE', end_date=#{newEndDate} WHERE user_id= #{id} AND isbn = #{isbn}
-  	</update> -->
+  	</update>  -->
 		
 </mapper>
 
