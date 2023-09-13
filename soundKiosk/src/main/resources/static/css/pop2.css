@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+}
+
+.container {
+    width: 800px;
+    height: 500px;
+    position: absolute;
+
+    border: 1px solid #000000;
+    background: #FFFFFF;
+}
+
+header {
+    width: 800px;
+    height: 70px;
+    flex-shrink: 0;
+
+    background: #67A0DA;
+}
+
+.msg {
+    margin-top: 100px;
+
+    color: #000000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+hr {
+    margin-left: 10px;
+    margin-right: 10px;
+    
+    background: #000000;
+}
+
+.msg-warn {
+    margin-top: 44px;
+
+    color: #D3585C;
+    text-align: center;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}

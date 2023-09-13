@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="../../static/css/option.css"> -->
+    <title>카페 키오스크</title>
+</head>
+<body>
+    <!-- <h1>카페 키오스크 주문 화면</h1> -->
+
+    <!-- 옵션 버튼 -->
+    <!-- <button id="옵션버튼">옵션 메뉴 열기</button> -->
+
+    <!-- 옵션 창 -->
+    <div id="옵션창" class="hidden">
+        <h2>옵션 메뉴</h2>
+        <h3>사이즈 선택</h3>
+        <input type="radio" name="사이즈" value="작은 사이즈"> 작은 사이즈
+        <input type="radio" name="사이즈" value="중간 사이즈"> 중간 사이즈
+        <input type="radio" name="사이즈" value="큰 사이즈"> 큰 사이즈
+
+        <h3>샷 추가</h3>
+        <input type="checkbox" id="샷추가" name="샷추가" value="샷 추가"> 샷 추가
+
+        <h3>얼음 양 선택</h3>
+        <input type="radio" name="얼음양" value="적게"> 적게
+        <input type="radio" name="얼음양" value="보통"> 보통
+        <input type="radio" name="얼음양" value="많게"> 많게
+    </div>
+
+    <!-- 주문 버튼 -->
+    <button onclick="주문하기()">주문하기</button>
+
+    <script>
+        function 주문하기() {
+            // 옵션 선택 내용 가져오기
+            var 사이즈선택 = document.querySelector('input[name="사이즈"]:checked');
+            var 샷추가 = document.getElementById('샷추가').checked;
+            var 얼음양 = document.querySelector('input[name="얼음양"]:checked');
+
+            // 주문 정보 구성
+            var 주문내용 = "음료: " + document.getElementById('음료선택').value + "\n";
+            if (사이즈선택) {
+                주문내용 += "사이즈: " + 사이즈선택.value + "\n";
+            }
+            if (샷추가) {
+                주문내용 += "샷 추가: 예\n";
+            }
+            if (얼음양) {
+                주문내용 += "얼음 양: " + 얼음양.value + "\n";
+            }
+
+            // 주문 내용 출력 (여기에서는 간단하게 alert로 표시)
+            alert("주문 내용:\n" + 주문내용);
+        }
+
+        // 옵션 버튼 클릭 시 옵션 창 토글
+        document.getElementById("옵션버튼").addEventListener("click", function () {
+            var 옵션창 = document.getElementById("옵션창");
+            옵션창.classList.toggle("hidden");
+        });
+    </script>
+</body>
+</html>

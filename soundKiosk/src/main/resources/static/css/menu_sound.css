@@ -1,0 +1,291 @@
+body {
+    margin: 0;
+}
+
+.container {
+    width: 1280px;
+    height: 1493px;
+    position: absolute;
+    flex-shrink: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    
+    background: #654330;
+}
+
+.button-home {
+    display: flex;
+    width: 331px;
+    height: 79px;
+    flex-direction: row;
+    justify-content: center;
+    flex-shrink: 0;
+    
+    color: #E6E6E6;
+    font-family: Inter;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.button-home img {
+    width: 58px;
+    height: 48.745px;
+    flex-shrink: 0;
+
+    margin: 5px;
+}
+
+.menu-tabs {
+    width: 1280px;
+    height: 129px;
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.menu-tabs img{
+    width: 90px;
+    height: 90px;
+    flex-shrink: 0;
+}
+
+.menu-tabs > div {
+    width: 336px;
+    height: 84px;
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    border-radius: 15px;
+    border: 1px solid #000;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin: 5px;
+
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.menu-tabs > .strong {
+    background: orange;
+}
+
+table {
+    width: 1222px;
+    height: 1093px;
+    flex-shrink: 0;
+
+    border-radius: 10px;
+    background: #FFFEFE;
+    margin-left: 29px;
+    margin-right: 29px;
+    margin-bottom: 33px;
+
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+th {
+    width: 360px;
+    height: 386px;
+    flex-shrink: 0;
+}
+
+th>img {
+    width: 360px;
+    height: 386px;
+    flex-shrink: 0;
+}
+
+td>img {
+    width: 360px;
+    height: 386px;
+    flex-shrink: 0;
+}
+
+.total {
+    width: 1280px;
+    height: 158px;
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    
+    background: #313131;
+}
+
+.count-order {
+    width: 174px;
+    height: 158px;
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.number-order {
+    text-align: center;
+    color: #FAFAFA;
+    font-family: Inter;
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.text-order {
+    text-align: center;
+    color: #FAFAFA;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.placeholder {
+    width: 439px;
+    height: 158px;
+    flex-shrink: 0;
+}
+
+.price-total {
+    width: 163px;
+    height: 158px;
+    flex-shrink: 0;
+}
+
+.number-price {
+    text-align: center;
+    color: #009DB2;
+    font-family: Inter;
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.text-price {
+    text-align: center;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-cancel {
+    width: 139px;
+    height: 118px;
+    margin: 11px;
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    border-radius: 10px;
+    background: #0F9AC6;
+}
+
+.button-cancel > img {
+    width: 64px;
+    height: 64px;
+}
+
+.text-cancel {
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.button-card {
+    width: 139px;
+    height: 118px;
+    margin: 11px;
+    flex-shrink: 0;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+    background: #E73131;
+}
+
+.button-card > img {
+    width: 75px;
+    height: 75px;
+}
+
+.text-card {
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.button-credits {
+    width: 139px;
+    height: 118px;
+    margin: 11px;
+    flex-shrink: 0;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+    background: #0E41C5;
+}
+
+.button-credits > img {
+    width: 77px;
+    height: 77px;
+}
+
+.text-credits {
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

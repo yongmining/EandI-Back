@@ -5,9 +5,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 @Controller
@@ -19,11 +19,26 @@ public class MenuController {
 	public MenuController(MenuService menuService) {
 		this.menuService = menuService;
 	}
-	@GetMapping("main")
+	
+	@GetMapping("/main")
 	public String main() {
-		return "default/main";
+	    return "/main/main";
 	}
 	
+	@GetMapping("menu/coffee")
+	public String coffee() {
+		return "/touch_menu/coffee";
+	}
+	
+	@GetMapping("menu/dessert")
+	public String dessert() {
+		return "/touch_menu/dessert";
+	}
+	
+	@GetMapping("menu/tea")
+	public String tea() {
+		return "/touch_menu/tea";
+	}
 	
 	@ResponseBody
 	@PostMapping("/upload")
@@ -37,11 +52,13 @@ public class MenuController {
         return result;
     }
 	
-	@GetMapping("/getTotalMenu")
-	public Object getTotalMenu() {
-		
-		ArrayList<MenuDTO> totalMenus = menuService.getTotalMenus();
-		return totalMenus;
-	}
+//	@GetMapping("/getTotalMenu")
+//	public ArrayList<MenuDTO> getTotalMenu() {
+//		ArrayList<MenuDTO> totalMenus = menuService.getTotalMenus();
+//		for(MenuDTO menus : totalMenus) {
+//			 System.out.println(menus.MName);
+//		}
+//		return totalMenus;
+//	}
 	
 }
