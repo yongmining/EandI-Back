@@ -22,10 +22,13 @@
     <div class="content">
      <table class="menu-table">
       <tr>
-        <td class="coffee_imgbox" th:each="coffees : ${coffees}">
-			<img th:src="${coffees.MImg}" /><br>
-        	<span th:text="${coffees.MName}"></span> 
-        	<span th:text="${coffees.MPrice}"></span> 
+        <td th:each="coffee : ${coffees}" 
+        th:menuName="${coffee.MName}"
+        th:menuPrice="${coffee.MPrice}"
+        th:onclick="addToOrder(this.getAttribute('menuName'),this.getAttribute('menuPrice'))">
+			<div class="coffee_imgbox" ><img th:src="${coffee.MImg}" /></div><br>
+        	<span th:text="${coffee.MName}"></span> 
+        	<span th:text="${coffee.MPrice}"></span> 
         </td>
       </tr>
      </table>

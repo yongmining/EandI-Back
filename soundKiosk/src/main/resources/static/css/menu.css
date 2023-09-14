@@ -139,7 +139,48 @@ th {
 
 	background: #F1F1F1;
 }
+.list-selected >div{
+	font-size: 35px;
+}
+.selected-name{
+	display: inline-block;
+	width:40%;
+}
+.selected-price{
+	display: inline-block;
+	width:10%;
+}
+/* 주문 내역 항목 스타일 */
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+}
 
+/* 선택된 메뉴 이름 스타일 */
+.selected-name {
+  font-weight: bold;
+}
+
+/* 선택된 메뉴 가격 스타일 */
+.selected-price {
+  color: #f00; /* 가격을 빨간색으로 표시 */
+}
+
+/* 삭제 버튼 스타일 */
+.delete-button {
+  background-color: #f00;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #ff3333;
+}
 .total {
 	width: 1280px;
 	height: 158px;
