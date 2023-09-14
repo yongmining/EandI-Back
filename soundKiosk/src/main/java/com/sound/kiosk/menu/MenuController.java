@@ -3,6 +3,7 @@ import java.util.ArrayList;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,11 +27,15 @@ public class MenuController {
 	}
 	
 	@GetMapping("menu/coffee")
-	public String coffee() {
+	public String coffee(Model model) {
+		//ArrayList<MenuDTO>menus = menuService.getTotalMenus();
+		int categoryNum = 1;
+		ArrayList<MenuDTO>coffees = menuService.findByCaNum(categoryNum);
+		model.addAttribute("coffees",coffees);
 		return "/touch_menu/coffee";
 	}
 	
-	@GetMapping("menu/dessert")
+	@GetMapping("menu/dessert") 
 	public String dessert() {
 		return "/touch_menu/dessert";
 	}

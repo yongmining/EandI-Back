@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,27 +12,21 @@
     <header>
       <div class="button-home"><img src="../../img/home.png" />처음으로</div>
       <div class="menu-tabs">
-        <img src="../../img/left-arrow.png" onclick="location.href='dessert.html'" />
+        <img src="../../img/left-arrow.png" onclick="location.href='menu/coffee'" />
         <div class="menu-coffee strong">커피</div>
         <div class="menu-tea">티 & 에이드</div>
         <div class="menu-dessert">디저트</div>
-        <img src="../../static/img/right-arrow.png" onclick="location.href='tea.html'" />
+        <img src="../../img/right-arrow.png" onclick="location.href='menu/dessert'" />
       </div>
     </header>
     <div class="content">
      <table class="menu-table">
-      <th><img src="../../img/coffee.png" /></th>
-      <th><img src="../../img/coffee.png" /></th>
-      <th><img src="../../img/coffee.png" /></th>
       <tr>
-        <td>아메리카노  2000원</td>
-        <td>카페라떼  3000원</td>
-        <td style="font-size: 32px">카라멜마끼아또  3500원</td>
-      </tr>
-      <tr>
-        <td><img src="../../static/img/coffee.png" /><br>바닐라라떼  3500원</td>
-        <td><img src="../../static/img/coffee.png" /><br>카페모카  4000원</td>
-        <td><img src="../../static/img/coffee.png" /><br>프라푸치노  3500원</td>
+        <td class="coffee_imgbox" th:each="coffees : ${coffees}">
+			<img th:src="${coffees.MImg}" /><br>
+        	<span th:text="${coffees.MName}"></span> 
+        	<span th:text="${coffees.MPrice}"></span> 
+        </td>
       </tr>
      </table>
      <footer>
@@ -51,15 +45,15 @@
         </div>
         <div class="buttons">
           <div class="button-cancel">
-            <img src="../../static/img/cancel.png" />
+            <img src="../../img/cancel.png" />
             <div class="text-cancel">전체취소</div>
           </div>
           <div class="button-card">
-            <img src="../../static/img/card.png" />
+            <img src="../../img/card.png" />
             <div class="text-card">카드결제</div>
           </div>
           <div class="button-credits">
-            <img src="../../static/img/credits.png" />
+            <img src="../../img/credits.png" />
             <div class="text-credits">현금결제</div>
           </div>
         </div>
