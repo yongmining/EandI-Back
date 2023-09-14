@@ -6,25 +6,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (btn_home) {
         btn_home.addEventListener('click', function() {
-            window.location.href = '../main/main.html';
+            window.location.href = '/main';
         });
     }
 
     if (menu_coffee) {
         menu_coffee.addEventListener('click', function() {
-            window.location.href = '../sound_menu/coffee.html';
+            window.location.href = '/menu/coffee';
         });
     }
 
     if (menu_tea) {
         menu_tea.addEventListener('click', function() {
-            window.location.href = '../sound_menu/tea.html';
+            window.location.href = '/menu/tea';
         });
     }
 
     if (menu_dessert) {
         menu_dessert.addEventListener('click', function() {
-            window.location.href = '../sound_menu/dessert.html';
+            window.location.href = '/menu/dessert';
         });
     }
 });
