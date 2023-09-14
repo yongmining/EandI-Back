@@ -27,6 +27,7 @@ body {
 	font-style: normal;
 	font-weight: 400;
 	line-height: normal;
+	cursor: pointer;
 }
 
 .button-home img {
@@ -51,6 +52,7 @@ body {
 	width: 90px;
 	height: 90px;
 	flex-shrink: 0;
+	cursor: pointer;
 }
 
 .menu-tabs>div {
@@ -75,6 +77,7 @@ body {
 	font-style: normal;
 	font-weight: 400;
 	line-height: normal;
+	cursor: pointer;
 }
 
 .menu-tabs>.strong {
@@ -118,6 +121,7 @@ th {
 	width: 360px;
 	height: 261px;
 	flex-shrink: 0;
+	cursor: pointer;
 }
 
 .coffee_imgbox>img {
@@ -230,6 +234,7 @@ th {
 
 	border-radius: 10px;
 	background: #0F9AC6;
+	cursor: pointer;
 }
 
 .button-cancel>img {
@@ -260,6 +265,7 @@ th {
 
 	border-radius: 10px;
 	background: #E73131;
+	cursor: pointer;
 }
 
 .button-card>img {
@@ -290,6 +296,7 @@ th {
 
 	border-radius: 10px;
 	background: #0E41C5;
+	cursor: pointer;
 }
 
 .button-credits>img {
