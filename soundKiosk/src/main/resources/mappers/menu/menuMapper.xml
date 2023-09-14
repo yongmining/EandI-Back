@@ -17,6 +17,10 @@
 	<select id = "getTotalMenus" resultMap="menuDto">
   		SELECT * FROM menu
   	</select>
+  	
+	<select id = "findByCaNum" resultMap="menuDto">
+  		SELECT * FROM menu WHERE M_CANUM = #{categoryNum}
+  	</select>
 
 	<!-- <select id="getTable" resultMap="bookDto">
 		<if test="whichTable == 'popularBook'">

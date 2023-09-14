@@ -7,12 +7,12 @@ import lombok.ToString;
 @Setter @Getter
 @ToString
 public class MenuDTO {
-	public String MNum;
+	public int MNum;
 	public String MName;
-	public String MPrice;
+	public int MPrice;
 	public String MImg;
 	public String MInfo;
-	public String MCaNum;
-	public String MStatus;
+	public int MCaNum;
+	public int MStatus;
 	
 }

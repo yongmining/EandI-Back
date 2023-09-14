@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee</title>
+  <link rel="stylesheet" href="../../css/menu.css" />
+  <script src="../../js/menu.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="button-home"><img src="../../img/home.png" />처음으로</div>
+      <div class="menu-tabs">
+        <img src="../../img/left-arrow.png" onclick="location.href='menu/coffee'" />
+        <div class="menu-coffee strong">커피</div>
+        <div class="menu-tea">티 & 에이드</div>
+        <div class="menu-dessert">디저트</div>
+        <img src="../../img/right-arrow.png" onclick="location.href='menu/dessert'" />
+      </div>
+    </header>
+    <div class="content">
+     <table class="menu-table">
+      <tr>
+        <td th:each="coffee : ${coffees}" 
+        th:menuName="${coffee.MName}"
+        th:menuPrice="${coffee.MPrice}"
+        th:onclick="addToOrder(this.getAttribute('menuName'),this.getAttribute('menuPrice'))">
+			<div class="coffee_imgbox" ><img th:src="${coffee.MImg}" /></div><br>
+        	<span th:text="${coffee.MName}"></span> 
+        	<span th:text="${coffee.MPrice}"></span> 
+        </td>
+      </tr>
+     </table>
+     <footer>
+      <div class="list-selected">
+        <!-- 여기에 주문 내역 담길 예정 -->
+      </div>
+      <div class="total">
+        <div class="count-order">
+          <div class="number-order">0</div>
+          <div class="text-order">주문수량</div>
+        </div>
+        <div class="placeholder"><!-- 주문수량과 합계금액 사이의 공백 --></div>
+        <div class="price-total">
+          <div class="number-price">0</div>
+          <div class="text-price">합계금액</div>
+        </div>
+        <div class="buttons">
+          <div class="button-cancel">
+            <img src="../../img/cancel.png" />
+            <div class="text-cancel">전체취소</div>
+          </div>
+          <div class="button-card">
+            <img src="../../img/card.png" />
+            <div class="text-card">카드결제</div>
+          </div>
+          <div class="button-credits">
+            <img src="../../img/credits.png" />
+            <div class="text-credits">현금결제</div>
+          </div>
+        </div>
+      </div>
+     </footer>
+    </div>
+  </div>
+</body>
+</html>

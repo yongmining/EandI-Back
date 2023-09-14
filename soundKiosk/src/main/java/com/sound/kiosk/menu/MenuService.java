@@ -18,4 +18,9 @@ public class MenuService {
 		return menus;
 	}
 	
+	public ArrayList<MenuDTO> findByCaNum(int categoryNum) {
+		ArrayList<MenuDTO> menus =  mapper.findByCaNum(categoryNum);
+		return menus;
+	}
+	
 }
